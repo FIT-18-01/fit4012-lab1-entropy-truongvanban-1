@@ -2,6 +2,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ double calculate_entropy(const string &text) {
 
     double entropy = 0.0;
     for (const auto &pair : freq) {
-        double p = static_cast<double>(pair.second) / text.size();
+        double p = (double)pair.second / text.size();
         entropy -= p * log2(p);
     }
     return entropy;
@@ -26,18 +27,19 @@ double calculate_entropy(const string &text) {
 double calculate_redundancy(const string &text, int alphabet_size = 256) {
     double H = calculate_entropy(text);
     double max_entropy = log2(alphabet_size);
-    return max_entropy - H;
+    return 1.0 - (H / max_entropy);
 }
 
 int main() {
     string input;
-    cout << "Enter a string of characters: ";
-    getline(cin, input);
+    getline(cin, input); 
 
     double entropy = calculate_entropy(input);
     double redundancy = calculate_redundancy(input);
 
-    cout << "Entropy: " << entropy << '\n';
-    cout << "Redundancy: " << redundancy << '\n';
+    cout << fixed << setprecision(4); 
+    cout << "Entropy: " << entropy << endl;
+    cout << "Redundancy: " << redundancy << endl;
+
     return 0;
 }

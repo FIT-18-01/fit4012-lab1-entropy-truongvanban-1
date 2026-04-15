@@ -11,4 +11,7 @@
 - [x] Đã chạy với `6 9`
 
 ## Điều em học được từ bài lab
-Viết 3-5 dòng ngắn gọn ở đây.
+Em hiểu cách tính entropy để đo độ ngẫu nhiên của dữ liệu.  
+Dữ liệu càng lặp thì entropy càng thấp và độ dư thừa cao.  
+Em cũng học được cách dùng thuật toán Euclid mở rộng để tìm nghịch đảo modulo.  
+Bài lab giúp em hiểu rõ hơn ứng dụng trong mật mã học.

@@ -13,16 +13,20 @@ Tóm tắt ngắn gọn mục tiêu của bài lab.
 ### 3.1 Entropy và redundancy
 | Input | Entropy | Redundancy | Nhận xét |
 |---|---:|---:|---|
-| aaaa |  |  |  |
-| abcd |  |  |  |
-| hello world |  |  |  |
+| aaaa | 0 | cao | dữ liệu lặp |
+| abcd | 2 | thấp | phân bố đều |
+| hello world | 2.8 | trung bình | pha trộn |
 
 ### 3.2 Modulo inverse
 | a | m | Kết quả mong đợi | Kết quả chương trình |
 |---:|---:|---|---|
-| 3 | 7 | 5 |  |
-| 10 | 17 | 12 |  |
-| 6 | 9 | Không tồn tại |  |
+| 3 | 7 | 5 | 5 |
+| 10 | 17 | 12 | 12 |
+| 6 | 9 | Không tồn tại | -1 |
 
 ## 4. Kết luận
-Nêu ngắn gọn em học được gì từ bài lab, khó khăn lớn nhất là gì, và điều gì giúp em hiểu rõ hơn về entropy hoặc modulo inverse.
+Hiểu cách tính entropy để đo độ ngẫu nhiên của dữ liệu
+Nhận ra dữ liệu càng lặp → entropy thấp → redundancy cao
+Hiểu thuật toán Euclid mở rộng để tìm nghịch đảo modulo
+Khó khăn: hiểu công thức entropy và debug modular inverse
+Bài giúp hiểu rõ hơn về ứng dụng trong mật mã học.
